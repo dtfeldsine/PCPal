@@ -2,7 +2,8 @@
 # Capped at 2 pages for now.
 from PCPartPicker_API import pcpartpicker
 
-print("Total CPU pages:", pcpartpicker.lists.total_pages("cpu"))
+def CPU_List():
+    print("Total CPU pages:", pcpartpicker.lists.total_pages("cpu"))
     print("CPU List")
     totalPgs = pcpartpicker.lists.total_pages("cpu")
     for x in range(1, 2):
