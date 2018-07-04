@@ -2,8 +2,8 @@
 # Capped at 2 pages for now.
 from PCPartPicker_API import pcpartpicker
 
-def CPU_List():
-    print("Total CPU pages:", pcpartpicker.lists.total_pages("cpu"))
+print("Total CPU pages:", pcpartpicker.lists.total_pages("cpu"))
+    print("CPU List")
     totalPgs = pcpartpicker.lists.total_pages("cpu")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("cpu", x)
@@ -13,6 +13,7 @@ def CPU_List():
 
 def MOBO_List():
     print("Total MOBO pages:", pcpartpicker.lists.total_pages("motherboard"))
+    print("MOBO List")
     totalPgs = pcpartpicker.lists.total_pages("motherboard")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("motherboard", x)
@@ -20,8 +21,9 @@ def MOBO_List():
             print(motherboard["name"], ":", motherboard["price"])
         #print(info)
 
-def MEM_List():
-    print("Total MEM pages:", pcpartpicker.lists.total_pages("memory"))
+def RAM_List():
+    print("Total RAM pages:", pcpartpicker.lists.total_pages("memory"))
+    print("RAM List")
     totalPgs = pcpartpicker.lists.total_pages("memory")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("memory", x)
@@ -31,6 +33,7 @@ def MEM_List():
 
 def GPU_List():
     print("Total GPU pages:", pcpartpicker.lists.total_pages("video-card"))
+    print("GPU List")
     totalPgs = pcpartpicker.lists.total_pages("video-card")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("video-card", x)
@@ -40,6 +43,7 @@ def GPU_List():
 
 def PSU_List():
     print("Total PSU pages:", pcpartpicker.lists.total_pages("power-supply"))
+    print("PSU List")
     totalPgs = pcpartpicker.lists.total_pages("power-supply")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("power-supply", x)
@@ -49,6 +53,7 @@ def PSU_List():
 
 def CASE_List():
     print("Total Case pages:", pcpartpicker.lists.total_pages("case"))
+    print("Case List")
     totalPgs = pcpartpicker.lists.total_pages("case")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("case", x)
