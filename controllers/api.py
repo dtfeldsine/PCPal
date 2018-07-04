@@ -36,3 +36,13 @@ def PSU_List():
     for x in range(1, 5):
         info = pcpartpicker.lists.get_list("power-supply", x)
         print(info)
+        
+def main():
+    CPU_List()
+    MOBO_List()
+    MEM_List()
+    GPU_List()
+    CASE_List()
+
+main()
+
