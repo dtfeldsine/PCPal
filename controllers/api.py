@@ -38,8 +38,8 @@ def GPU_List():
     totalPgs = pcpartpicker.lists.total_pages("video-card")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("video-card", x)
-        #for video-card in info:
-           # print(video-card["name"], ":", video-card["price"])
+        for videocard in info:
+            print(videocard["name"], ":", videocard["price"])
         #print(info)
 
 def PSU_List():
@@ -48,8 +48,8 @@ def PSU_List():
     totalPgs = pcpartpicker.lists.total_pages("power-supply")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("power-supply", x)
-        #for power-supply in info:
-        #    print(power-supply["name"], ":", power-supply["price"])
+        for powersupply in info:
+            print(powersupply["name"], ":", powersupply["price"])
         #print(info)
 
 def CASE_List():
@@ -66,6 +66,7 @@ def main():
     MOBO_List()
     RAM_List()
     GPU_List()
+    PSU_List()
     CASE_List()
 
 main()
