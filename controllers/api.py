@@ -12,7 +12,7 @@ def CPU_List():
 def MOBO_List():
     print("Total MOBO pages:", pcpartpicker.lists.total_pages("motherboard"))
     totalPgs = pcpartpicker.lists.total_pages("motherboard")
-    for x in range(1, totalPgs):
+    for x in range(1, 5):
         info = pcpartpicker.lists.get_list("motherboard", x)
         print(info)
 
