@@ -64,7 +64,7 @@ def CASE_List():
 def main():
     CPU_List()
     MOBO_List()
-    MEM_List()
+    RAM_List()
     GPU_List()
     CASE_List()
 
