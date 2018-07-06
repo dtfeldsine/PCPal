@@ -38,7 +38,7 @@ db.define_table('psu',
 db.define_table('mobo',
                 Field('mobo_name', 'text'),
                 Field('mobo_size', 'text'),
-                Field('mobo_chipset', 'text'),
+                Field('mobo_socket', 'text'),
                 )
                 
 db.define_table('hdd',
