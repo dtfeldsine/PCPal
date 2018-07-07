@@ -19,6 +19,15 @@ var app = function() {
         delimiters: ['${', '}'],
         unsafeDelimiters: ['!{', '}'],
         data: {
+            cpu_list: [],
+            gpu_list: [],
+            mem_list: [],
+            mobo_list: [],
+            hdd_list: [],
+            case_list: [],
+            psu_list: [],
+            logged_in: false,
+            user_email: null,
         },
         methods: {
         }
