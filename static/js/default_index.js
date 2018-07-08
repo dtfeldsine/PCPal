@@ -19,7 +19,7 @@ var app = function() {
         delimiters: ['${', '}'],
         unsafeDelimiters: ['!{', '}'],
         data: {
-            cpu_list: [],
+            cpu_list: [${CPU_1}, ${CPU_2}, ${CPU_3}, ${CPU_4}, ${CPU_5}],
             gpu_list: [],
             mem_list: [],
             mobo_list: [],
