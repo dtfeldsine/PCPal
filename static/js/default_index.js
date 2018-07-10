@@ -12,7 +12,50 @@ var app = function() {
             a.push(b[i]);
         }
     };
-
+    var enumerate = function(v) { var k=0; return v.map(function(e) {e._idx = k++;});};
+    
+    self.cpu_list = function () {
+       console.log("in cpu_list");
+       $.getJSON(cpu_list_url, function (data) {
+           self.vue.cpu_list = data.cpu_list;
+       })
+    };
+    self.gpu_list = function () {
+       console.log("in gpu_list");
+       $.getJSON(gpu_list_url, function (data) {
+           self.vue.gpu_list = data.gpu_list;
+       })
+    };
+    self.mem_list = function () {
+       console.log("in mem_list");
+       $.getJSON(mem_list_url, function (data) {
+           self.vue.mem_list = data.mem_list;
+       })
+    };
+    self.mobo_list = function () {
+       console.log("in mobo_list");
+       $.getJSON(mobo_list_url, function (data) {
+           self.vue.mobo_list = data.mobo_list;
+       })
+    };
+    self.hdd_list = function () {
+       console.log("in hdd_list");
+       $.getJSON(hdd_list_url, function (data) {
+           self.vue.hdd_list = data.hdd_list;
+       })
+    };
+    self.psu_list = function () {
+       console.log("in psu_list");
+       $.getJSON(psu_list_url, function (data) {
+           self.vue.psu_list = data.psu_list;
+       })
+    };
+    self.case_list = function () {
+       console.log("in case_list");
+       $.getJSON(case_list_url, function (data) {
+           self.vue.case_list = data.case_list;
+       })
+    };
     // Complete as needed.
     self.vue = new Vue({
         el: "#vue-div",
@@ -24,17 +67,25 @@ var app = function() {
             mem_list: [],
             mobo_list: [],
             hdd_list: [],
-            case_list: [],
             psu_list: [],
+            case_list: [],
             logged_in: false,
             user_email: null,
         },
         methods: {
+            cpu_list: self.cpu_list,
+            gpu_list: self.gpu_list,
+            mem_list: self.mem_list,
+            mobo_list: self.mobo_list,
+            hdd_list: self.hdd_list,
+            psu_list: self.psu_list,
+            case_list: self.case_list,
         }
 
     });
 
-
+    self.cpu_list();
+    $("#vue-div").show();
     return self;
 };
 

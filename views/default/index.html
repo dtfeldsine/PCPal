@@ -1,6 +1,18 @@
 {{extend 'layout.html'}}
 
 {{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+
+<script>
+     var cpu_list_url = "{{=URL('api', 'cpu_list')}}";
+     var gpu_list_url = "{{=URL('api', 'gpu_list')}}";
+     var mem_list_url = "{{=URL('api', 'mem_list')}}";
+     var mobo_list_url = "{{=URL('api', 'mobo_list')}}";
+     var hdd_list_url = "{{=URL('api', 'hdd_list')}}";
+     var psu_list_url = "{{=URL('api', 'psu_list')}}";
+     var case_list_url = "{{=URL('api', 'case_list')}}";
+
+</script>
 {{end}}
 
 <div class="main_content">
@@ -8,7 +20,7 @@
   <!-- Here goes your main HTML code. -->
 
   <div id="vue-div" class="display:none">
-  
+
      <div class="padded">
        <h2>Welcome to PC Pal!</h2>
        <div class="container">
@@ -25,72 +37,793 @@
            </div>
          </div>
          <div class="threequarters">
-           <div class="accordion">
+
+
+           <div class="accordion" id="mybuild_data">
              <input type="radio" name="group1" id="myBuildTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 My Build Tab, display build data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Memory Name.</div>
+                     <div class="black padded rounded">Memory Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Motherboard Name.</div>
+                     <div class="black padded rounded">Motherboard Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Case Name.</div>
+                     <div class="black padded rounded">Case Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="cpu_data">
              <input type="radio" name="group1" id="CPUTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Processors Tab, display processor data here 
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">Processor Name.</div>
+                     <div class="black padded rounded">Processor Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="gpu_data">
              <input type="radio" name="group1" id="GPUTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Graphics Card Tab, display graphics card data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">GPU Name.</div>
+                     <div class="black padded rounded">GPU Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="ram_data">
              <input type="radio" name="group1" id="MemTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Memory Tab, display memory data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">RAM Name.</div>
+                     <div class="black padded rounded">RAM Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="mobo_data">
              <input type="radio" name="group1" id="MoboTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Motherboard Tab, display motherboard data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">MOBO Name.</div>
+                     <div class="black padded rounded">MOBO Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="hdd_data">
              <input type="radio" name="group1" id="HDDTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Hard Disk Drive Tab, display Hard Disk Drive data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">HDD Name.</div>
+                     <div class="black padded rounded">HDD Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="psu_data">
              <input type="radio" name="group1" id="PSUTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Power Supply Tab, display Power Supply data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">PSU Name.</div>
+                     <div class="black padded rounded">PSU Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
-           <div class="accordion">
+
+
+           <div class="accordion" id="cpu_data">
              <input type="radio" name="group1" id="CaseTab">
              <div>
-               <div class="card" style="width:500px; height:200px">
-                 Case Tab, display Case data here
+               <div class="grid" style="width:700px; height:700px">
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
+                 <div class="card" style="width:150px; height:150px; display: inline-block">
+                   <div>
+                     <div class="white padded rounded">CASE Name.</div>
+                     <div class="black padded rounded">CASE Stats.</div>
+                   </div>
+                 </div>
                </div>
              </div>
            </div>
          </div>
-     </div>  
-  
-</div>
+     </div>
 
+</div>
