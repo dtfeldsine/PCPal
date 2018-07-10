@@ -52,10 +52,10 @@ db.define_table('PSU',
                 Field('powersupply_efficiency','text'),
                 )
                 
-db.define_table('case',
-                Field('case_name', 'text'),
-                Field('case_price','text'),
-                Field('case_type', 'text'),
+db.define_table('tower',
+                Field('tower_name', 'text'),
+                Field('tower_price','text'),
+                Field('tower_type', 'text'),
                 )
 
                 
