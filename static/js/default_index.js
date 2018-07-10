@@ -76,13 +76,13 @@ var app = function() {
             user_email: null,
         },
         methods: {
-            cpu_list: self.cpu_list,
-            gpu_list: self.gpu_list,
-            mem_list: self.mem_list,
-            mobo_list: self.mobo_list,
-            hdd_list: self.hdd_list,
-            psu_list: self.psu_list,
-            case_list: self.case_list,
+            cpu_list_func: self.cpu_list_func,
+            gpu_list_func: self.gpu_list_func,
+            mem_list_func: self.mem_list_func,
+            mobo_list_func: self.mobo_list_func,
+            hdd_list_func: self.hdd_list_func,
+            psu_list_func: self.psu_list_func,
+            case_list_func: self.case_list_func,
         }
 
     });
