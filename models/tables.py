@@ -11,46 +11,64 @@ db.define_table('pc',
                 Field('user_email', default=auth.user.email if auth.user else None),
                 )
                 
-db.define_table('cpu',
+db.define_table('CPU',
                 Field('cpu_name', 'text'),
+				Field('cpu_price', 'text'),
                 Field('cpu_speed', 'text'),
-                Field('cpu_chipset', 'text'),
+				Field('cpu_ratings', 'text'),
+                Field('cpu_cores', 'text'),
                 )
                 
-db.define_table('gpu',
-                Field('gpu_name', 'text'),
-                Field('gpu_speed', 'text'),
-                Field('gpu_chipset', 'text'),
+db.define_table('motherboard',
+                Field('motherboard_name', 'text'),
+                Field('motherboard_price', 'text'),
+                Field('motherboard_socket', 'text'),
+                Field('motherboard_ram','text'),
+                Field('motherboard_ratings','text'),
                 )
                 
-db.define_table('mem',
-                Field('mem_name', 'text'),
-                Field('mem_speed', 'text'),
-                Field('mem_chipset', 'text'),
+db.define_table('memory',
+                Field('memory_name', 'text'),
+                Field('memory_speed', 'text'),
+                Field('memory_price', 'text'),
+                Field('memory_size','text'),
+                Field('memory_price_gb','text'),
                 )
                 
-db.define_table('psu',
-                Field('psu_name', 'text'),
-                Field('psu_wattage', 'text'),
-                Field('psu_rating', 'text'),
+db.define_table('GPU',
+                Field('GPU_name', 'text'),
+                Field('GPU_price', 'text'),
+                Field('GPU_memory','text'),
+                Field('GPU_chipset', 'text'),
                 )
                 
-db.define_table('mobo',
-                Field('mobo_name', 'text'),
-                Field('mobo_size', 'text'),
-                Field('mobo_socket', 'text'),
+
+                
+db.define_table('PSU',
+                Field('powersupply_name', 'text'),
+                Field('powersupply_watts', 'text'),
+                Field('powersupply_price', 'text'),
+                Field('powersupply_series','text'),
+                Field('powersupply_efficiency','text'),
                 )
+                
+db.define_table('case',
+                Field('case_name', 'text'),
+                Field('case_price','text'),
+                Field('case_type', 'text'),
+                )
+
                 
 db.define_table('hdd',
                 Field('hdd_name', 'text'),
                 Field('hdd_type', 'text'),
-                Field('hdd_size', 'text'),
+                Field('hdd_capacity', 'text'),
+                Field('hdd_price','text'),
+                Field('hdd_price_gb','text'), #price/gb
+                Field('hdd_series','text'),
                 )
                 
-db.define_table('tower',
-                Field('tower_name', 'text'),
-                Field('tower_size', 'text'),
-                )
+
 
 
 # after defining tables, uncomment below to enable auditing
