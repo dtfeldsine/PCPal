@@ -1,6 +1,15 @@
 {{extend 'layout.html'}}
 
 {{block head}}
+<script>
+     var cpu_list_url = "{{=URL('api', 'cpu_list')}}";
+     var gpu_list_url = "{{=URL('api', 'gpu_list')}}";
+     var mem_list_url = "{{=URL('api', 'mem_list')}}";
+     var mobo_list_url = "{{=URL('api', 'mobo_list')}}";
+     var hdd_list_url = "{{=URL('api', 'hdd_list')}}";
+     var psu_list_url = "{{=URL('api', 'psu_list')}}";
+     var case_list_url = "{{=URL('api', 'case_list')}}";
+</script>
 {{end}}
 
 <div class="main_content">
@@ -35,9 +44,11 @@
            </div>
            <div class="accordion">
              <input type="radio" name="group1" id="CPUTab">
-             <div>
+             <div v-for="CPU in cpu_list" class="container padded">
                <div class="card" style="width:500px; height:200px">
-                 Processors Tab, display processor data here 
+                 <div>
+                   <h5> Name: ${CPU.cpu_name} </h5>
+                 </div>
                </div>
              </div>
            </div>

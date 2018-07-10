@@ -5,7 +5,7 @@ from PCPartPicker_API import pcpartpicker
 def CPU_List():
     print("Total CPU pages:", pcpartpicker.lists.total_pages("cpu"))
     print("CPU List")
-    parts = []
+    cpu_list = []
     totalPgs = pcpartpicker.lists.total_pages("cpu")
     for x in range(1, 2):
         info = pcpartpicker.lists.get_list("cpu", x)
@@ -17,8 +17,10 @@ def CPU_List():
                 cpu_ratings = cpu["ratings"],
                 cpu_cores = cpu["cores"],
             )
-            parts.append(part)
-            print(part["cpu_name"] + ' ' + part["cpu_price"] + ' ' + part["cpu_speed"] + ' gotta go fast')
+            cpu_list.append(part)
+            
+    return response.json(dict(cpu_list=cpu_list,
+    ))
             
         #print(info)
         

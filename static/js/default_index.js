@@ -18,6 +18,7 @@ var app = function() {
        console.log("in cpu_list");
        $.getJSON(cpu_list_url, function (data) {
            self.vue.cpu_list = data.cpu_list;
+           enumerate(self.vue.search_list);
        })
     };
     self.gpu_list = function () {
@@ -56,6 +57,8 @@ var app = function() {
            self.vue.case_list = data.case_list;
        })
     };
+    
+    
     // Complete as needed.
     self.vue = new Vue({
         el: "#vue-div",
