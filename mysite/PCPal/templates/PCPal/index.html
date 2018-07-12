@@ -1,0 +1,9 @@
+{% if latest_cpu_list %}
+    <ul>
+    {% for cpu in latest_cpu_list %}
+        <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No CPUs are available.</p>
+{% endif %}
