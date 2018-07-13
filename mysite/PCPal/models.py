@@ -80,3 +80,34 @@ class HDD(models.Model):
 
     def __str__(self):
         return self.hdd_name
+
+
+class PSU(models.Model):
+    psu_name = models.CharField(max_length = 200)
+    psu_price = models.CharField(max_length = 200)
+    psu_watts = models.CharField(max_length = 200)
+    def update(self):
+        list = pcpartpicker.lists.get_list('powersupply', 1)
+        for powersupply in list:
+            psu_entry = PSU(psu_name=psu["name"],
+                            psu_price=psu["price"],
+                            psu_psu=psu["watts"])
+            psu_entry.save()
+
+    def __str__(self):
+        return self.psu_name
+
+class TWR(models.Model):
+    twr_name = models.CharField(max_length = 200)
+    twr_price = models.CharField(max_length = 200)
+    twr_type = models.CharField(max_length = 200)
+    def update(self):
+        list = pcpartpicker.lists.get_list('case', 1)
+        for case in list:
+            case_entry = TWR(twr_name=case["name"],
+                            twr_price=case["price"],
+                            twr_type=case["type"])
+            case_entry.save()
+
+    def __str__(self):
+        return self.twr_name
