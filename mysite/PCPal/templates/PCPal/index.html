@@ -3,7 +3,6 @@
 {% block content %}
 <div class="main_content">
   <div id="vue-div" class="display:none">
-  
     <div class="padded">
       <h2>Welcome to PC Pal!</h2>
       <div class="container">
@@ -60,7 +59,7 @@
                 {% for gpu in latest_gpu_list %}
                 <div class="card" style="width:275px; height:96px; display: inline-block">
                   <div>
-                    <div class="white padded rounded" >
+                    <div class="white padded rounded">
                       <li><a href = "/PCPal/{{ gpu.id }}/">{{ gpu.gpu_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
