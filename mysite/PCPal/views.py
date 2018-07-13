@@ -25,7 +25,7 @@ def cpu_index(request):
         'latest_ram_list': latest_ram_list, 
         'latest_mobo_list': latest_mobo_list, 
         'latest_hdd_list': latest_hdd_list, 
-        'latest_case_list': latest_case)list,
+        'latest_case_list': latest_case_list,
     }
     return render(request, 'PCPal/index.html', context)
  
