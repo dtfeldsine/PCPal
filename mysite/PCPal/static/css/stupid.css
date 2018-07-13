@@ -1,4 +1,4 @@
-/************
+200px/************
   Created by Massimo Di Pierro
   Stupid.css is what the names says, take it with a grain of salt
   License: BSD
@@ -318,16 +318,16 @@ a:not(.btn):not(.noeffect):after {
 .accordion>input:checked ~ *:not(label) {
   max-height: 1000px !important;
   overflow:hidden !important;
-  -webkit-transition: max-height .3s ease-in;
-  transition: max-height .3s ease-in;
+  -webkit-transition: 200px .3s ease-in;
+  transition: 200px .3s ease-in;
 }
 .accordion>*:not(label) {
   max-height: 0;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  -webkit-transition: max-height .3s ease-out;
-  transition: max-height .3s ease-out;
+  -webkit-transition: 200px .3s ease-out;
+  transition: 200px .3s ease-out;
 }
 
 
