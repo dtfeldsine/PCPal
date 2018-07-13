@@ -87,11 +87,11 @@ class PSU(models.Model):
     psu_price = models.CharField(max_length = 200)
     psu_watts = models.CharField(max_length = 200)
     def update(self):
-        list = pcpartpicker.lists.get_list('powersupply', 1)
+        list = pcpartpicker.lists.get_list('power-supply', 1)
         for powersupply in list:
-            psu_entry = PSU(psu_name=psu["name"],
-                            psu_price=psu["price"],
-                            psu_psu=psu["watts"])
+            psu_entry = PSU(psu_name=powersupply["name"],
+                            psu_price=powersupply["price"],
+                            psu_watts=powersupply["watts"])
             psu_entry.save()
 
     def __str__(self):
