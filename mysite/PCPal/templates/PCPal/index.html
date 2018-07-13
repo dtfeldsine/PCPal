@@ -30,17 +30,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="CPUTab">
-              <div>
-                {% if latest_cpu_list %}
-                <ul>
-                  {% for cpu in latest_cpu_list %}
-                    <div class="card" style="width:500px; height:100px">
+            <div>
+              {% if latest_cpu_list %}
+              <ul>
+                {% for cpu in latest_cpu_list %}
+                <div class="card" style="width:275px; height:96px; display: inline-block">
+                  <div>
+                    <div class="white padded rounded">
                       <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                    </div>
+                    <div class="black padded rounded">
                       <div> Price: {{ cpu.cpu_price }} </div>
                       <div> Speed: {{ cpu.cpu_speed }} </div>
                     </div>
-                  {% endfor %}
-                  </ul>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No CPUs are available.</p>
                 {% endif %}
@@ -48,17 +54,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="GPUTab">
-              <div>
-                {% if latest_gpu_list %}
-                <ul>
-                  {% for gpu in latest_gpu_list %}
-                    <div class="card" style="width:500px; height:100px">
+            <div>
+              {% if latest_gpu_list %}
+              <ul>
+                {% for gpu in latest_gpu_list %}
+                <div class="card" style="width:275px; height:96px; display: inline-block">
+                  <div>
+                    <div class="white padded rounded" >
                       <li><a href = "/PCPal/{{ gpu.id }}/">{{ gpu.gpu_name }}</a><li>
+                    </div>
+                    <div class="black padded rounded">
                       <div> Price: {{ gpu.gpu_price }} </div>
                       <div> Speed: {{ gpu.gpu_mem }} </div>
                     </div>
-                  {% endfor %}
-                  </ul>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No GPUs are available.</p>
                 {% endif %}
@@ -66,17 +78,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="MemTab">
-              <div>
-                {% if latest_ram_list %}
-                <ul>
-                  {% for ram in latest_ram_list %}
-                    <div class="card" style="width:500px; height:100px">
+            <div>
+              {% if latest_ram_list %}
+              <ul>
+                {% for ram in latest_ram_list %}
+                <div class="card" style="width:275px; height:96px; display: inline-block">
+                  <div>
+                    <div class="white padded rounded">
                       <li><a href = "/PCPal/{{ ram.id }}/">{{ ram.ram_name }}</a><li>
+                    </div>
+                    <div class="black padded rounded">
                       <div> Price: {{ ram.ram_price }} </div>
                       <div> Capacity: {{ ram.ram_size }} </div>
                     </div>
-                  {% endfor %}
-                  </ul>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No RAM kits are available.</p>
                 {% endif %}
@@ -84,17 +102,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="MoboTab">
-              <div>
-                {% if latest_mobo_list %}
-                <ul>
-                  {% for mobo in latest_mobo_list %}
-                    <div class="card" style="width:500px; height:100px">
+            <div>
+              {% if latest_mobo_list %}
+              <ul>
+                {% for mobo in latest_mobo_list %}
+                <div class="card" style="width:275px; height:96px; display: inline-block">
+                  <div>
+                    <div class="white padded rounded">
                       <li><a href = "/PCPal/{{ mobo.id }}/">{{ mobo.mobo_name }}</a><li>
+                    </div>
+                    <div class="black padded rounded">
                       <div> Price: {{ mobo.mobo_price }} </div>
                       <div> Max RAM: {{ mobo.mobo_ram }} </div>
                     </div>
-                  {% endfor %}
-                  </ul>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No motherboards are available.</p>
                 {% endif %}
@@ -102,17 +126,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="HDDTab">
-              <div>
-                {% if latest_hdd_list %}
-                <ul>
-                  {% for hdd in latest_hdd_list %}
-                    <div class="card" style="width:500px; height:100px">
+            <div>
+              {% if latest_hdd_list %}
+              <ul>
+                {% for hdd in latest_hdd_list %}
+                <div class="card" style="width:275px; height:96px; display: inline-block">
+                  <div>
+                    <div class="white padded rounded">
                       <li><a href = "/PCPal/{{ cpu.id }}/">{{ hdd.hdd_name }}</a><li>
+                    </div>
+                    <div class="black padded rounded">
                       <div> Price: {{ hdd.hdd_price }} </div>
                       <div> Capacity: {{ hdd.hdd_cap }} </div>
                     </div>
-                  {% endfor %}
-                  </ul>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No hard drives are available.</p>
                 {% endif %}
@@ -120,17 +150,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="PSUTab">
-              <div>
-                {% if latest_cpu_list %}
-                <ul>
-                  {% for cpu in latest_cpu_list %}
-                    <div class="card" style="width:500px; height:100px">
+            <div>
+              {% if latest_cpu_list %}
+              <ul>
+                {% for cpu in latest_cpu_list %}
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <div class="white padded rounded">
                       <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                    </div>
+                    <div class="black padded rounded">
                       <div> Price: {{ cpu.cpu_price }} </div>
                       <div> Speed: {{ cpu.cpu_speed }} </div>
                     </div>
-                  {% endfor %}
-                  </ul>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No CPUs are available.</p>
                 {% endif %}
@@ -138,17 +174,23 @@
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="CaseTab">
-              <div>
-                {% if latest_cpu_list %}
-                <ul>
-                  {% for cpu in latest_cpu_list %}
-                    <div class="card" style="width:500px; height:100px">
-                      <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
-                      <div> Price: {{ cpu.cpu_price }} </div>
-                      <div> Speed: {{ cpu.cpu_speed }} </div>
-                    </div>
-                  {% endfor %}
-                  </ul>
+            <div>
+              {% if latest_cpu_list %}
+              <ul>
+                {% for cpu in latest_cpu_list %}
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                      <div class="white padded rounded">
+                        <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: {{ cpu.cpu_price }} </div>
+                        <div> Speed: {{ cpu.cpu_speed }} </div>
+                      </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </ul>
                 {% else %}
                   <p>No CPUs are available.</p>
                 {% endif %}
@@ -169,5 +211,5 @@
 {% endif %}
   </div>
 </div>
--->
+-2>
 {% endblock %}
