@@ -1,3 +1,103 @@
+{% extends "PCPal/base.html" %}
+
+{% block content %}
+<div class="main_content">
+  <div id="vue-div" class="display:none">
+  
+    <div class="padded">
+      <h2>Welcome to PC Pal!</h2>
+      <div class="container">
+        <div class="quarter">
+          <div class="padded">
+            <label class="btn fill teal" for="myBuildTab">My Build</label>
+            <label class="btn fill teal" for="CPUTab">Processors</label>
+            <label class="btn fill teal" for="GPUTab">Graphics Cards</label>
+            <label class="btn fill teal" for="MemTab">Memory</label>
+            <label class="btn fill teal" for="MoboTab">Motherboards</label>
+            <label class="btn fill teal" for="HDDTab">Hard Drives</label>
+            <label class="btn fill teal" for="PSUTab">Power Supplies</label>
+            <label class="btn fill teal" for="CaseTab">PC Cases</label>
+          </div>
+        </div>
+        <div class="threequarters">
+          <div class="accordion">
+            <input type="radio" name="group1" id="myBuildTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                My Build Tab, display build data here
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="CPUTab">
+              <div>
+                   {% if latest_cpu_list %}
+                    <ul>
+                      {% for cpu in latest_cpu_list %}
+                        <div class="card" style="width:500px; height:100px">
+                          <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                          <div> Price: {{ cpu.cpu_price }} </div>
+                          <div> Speed: {{ cpu.cpu_speed }} </div>
+                        </div>
+                      {% endfor %}
+                      </ul>
+                    {% else %}
+                      <p>No CPUs are available.</p>
+                    {% endif %}
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="GPUTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                Graphics Card Tab, display graphics card data here
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="MemTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                Memory Tab, display memory data here
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="MoboTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                Motherboard Tab, display motherboard data here
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="HDDTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                Hard Disk Drive Tab, display Hard Disk Drive data here
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="PSUTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                Power Supply Tab, display Power Supply data here
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="radio" name="group1" id="CaseTab">
+            <div>
+              <div class="card" style="width:500px; height:200px">
+                Case Tab, display Case data here
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--
 {% if latest_cpu_list %}
     <ul>
     {% for cpu in latest_cpu_list %}
@@ -7,3 +107,7 @@
 {% else %}
     <p>No CPUs are available.</p>
 {% endif %}
+  </div>
+</div>
+-->
+{% endblock %}

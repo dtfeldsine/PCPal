@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    {# loads static files #}
+    {% block static %}
+    {% load static %}
+    <!-- Load Static Files Here -->
+    <link rel = "stylesheet" type="text/css" href="{% static 'css/stupid.css' %}" />
+    <link rel = "stylesheet" type="text/js" href="{% static 'js/vue.js' %}" />
+    {% endblock %}
+
+
+    {# loads header/nav bar #}
+    {% block header %} 
+    <header>
+      <!-- Header Code here -->
+    </header> 
+    {% endblock %}
+
+    {# The Document Body #}
+    <div class="site-wrapper">
+        <div class="aspect-wrapper">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</html>
