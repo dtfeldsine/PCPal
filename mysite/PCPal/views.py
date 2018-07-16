@@ -18,7 +18,7 @@ def cpu_index(request):
     latest_mobo_list = MOBO.objects.order_by('-mobo_name')[:100]
     latest_hdd_list = HDD.objects.order_by('-hdd_name')[:100]
     latest_psu_list = PSU.objects.order_by('-psu_name')[:100]
-    latest_case_list = TWR.objects.order_by('-case_name')[:100]
+    latest_case_list = TWR.objects.order_by('-twr_name')[:100]
     context = {
         'latest_cpu_list': latest_cpu_list,
         'latest_gpu_list': latest_gpu_list, 

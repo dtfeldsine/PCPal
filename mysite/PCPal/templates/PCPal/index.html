@@ -132,7 +132,7 @@
                 <div class="card" style="width:275px; height:96px; display: inline-block">
                   <div>
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ cpu.id }}/">{{ hdd.hdd_name }}</a><li>
+                      <li><a href = "/PCPal/{{ hdd.id }}/">{{ hdd.hdd_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
                       <div> Price: {{ hdd.hdd_price }} </div>
@@ -150,48 +150,48 @@
           <div class="accordion">
             <input type="radio" name="group1" id="PSUTab">
             <div>
-              {% if latest_cpu_list %}
+              {% if latest_psu_list %}
               <ul>
-                {% for cpu in latest_cpu_list %}
+                {% for psu in latest_psu_list %}
                 <div class="card" style="width:275px; height:96px;display: inline-block">
                   <div>
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                      <li><a href = "/PCPal/{{ psu.id }}/">{{ psu.psu_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
-                      <div> Price: {{ cpu.cpu_price }} </div>
-                      <div> Speed: {{ cpu.cpu_speed }} </div>
+                      <div> Price: {{ psu.psu_price }} </div>
+                      <div> Peak Wattage: {{ psu.psu_watts }} </div>
                     </div>
                   </div>
                 </div>
                 {% endfor %}
               </ul>
                 {% else %}
-                  <p>No CPUs are available.</p>
+                  <p>No PSUs are available.</p>
                 {% endif %}
             </div>
           </div>
           <div class="accordion">
             <input type="radio" name="group1" id="CaseTab">
             <div>
-              {% if latest_cpu_list %}
+              {% if latest_case_list %}
               <ul>
-                {% for cpu in latest_cpu_list %}
+                {% for twr in latest_case_list %}
                 <div class="card" style="width:275px; height:96px;display: inline-block">
                   <div>
                       <div class="white padded rounded">
-                        <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                        <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
                       </div>
                       <div class="black padded rounded">
-                        <div> Price: {{ cpu.cpu_price }} </div>
-                        <div> Speed: {{ cpu.cpu_speed }} </div>
+                        <div> Price: {{ twr.twr_price }} </div>
+                        <div> Tower Type: {{ twr.twr_type }} </div>
                       </div>
                   </div>
                 </div>
                 {% endfor %}
               </ul>
                 {% else %}
-                  <p>No CPUs are available.</p>
+                  <p>No Cases are available.</p>
                 {% endif %}
             </div>
           </div>
