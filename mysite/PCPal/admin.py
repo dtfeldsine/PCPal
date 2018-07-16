@@ -9,6 +9,8 @@ from .models import MOBO
 from .models import RAM
 from .models import GPU
 from .models import HDD
+from .models import PSU
+from .models import TWR
 
 class cpu_admin(admin.ModelAdmin):
     def cpu_list(self):
@@ -77,4 +79,29 @@ class hdd_admin(admin.ModelAdmin):
 admin.site.register(HDD, hdd_admin)
 
 
+class psu_admin(admin.ModelAdmin):
+    def psu_list(self):
+        html = ""
+        list = pcpartpicker.lists.get_list('power-supply', 1)
+        for powersupply in list:
+            html += '%s, '%psu["name"]
+            html += '%s, '%psu["price"]
+            html += '%s, '%psu["watts"]
+            html += '\n'
+        return html
+    list_display = ['psu_name', 'psu_price', 'psu_watts']
+admin.site.register(PSU, psu_admin)
+
+class twr_admin(admin.ModelAdmin):
+    def twr_list(self):
+        html = ""
+        list = pcpartpicker.lists.get_list('case', 1)
+        for twr in list:
+            html += '%s, '%twr["name"]
+            html += '%s, '%twr["price"]
+            html += '%s, '%twr["type"]
+            html += '\n'
+        return html
+    list_display = ['twr_name', 'twr_price', 'twr_type']
+admin.site.register(TWR, twr_admin)
 
