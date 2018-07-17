@@ -14,7 +14,12 @@
     {# loads header/nav bar #}
     {% block header %} 
     <header>
-      <!-- Header Code here -->
+        <script src="js/jquery.js"></script> 
+        <script> 
+        $(function(){
+            $("#includedContent").load("rec_parts.html"); 
+        });
+        </script>
     </header> 
     {% endblock %}
 
@@ -25,4 +30,5 @@
             {% endblock %}
         </div>
     </div>
+    <div id="includedContent"></div>
 </html>
