@@ -1,5 +1,6 @@
 {% extends "PCPal/base.html" %}
 
+
 {% block content %}
 <div class="main_content">
   <div id="vue-div" class="display:none">
@@ -16,6 +17,12 @@
             <label class="btn fill teal" for="HDDTab">Hard Drives</label>
             <label class="btn fill teal" for="PSUTab">Power Supplies</label>
             <label class="btn fill teal" for="CaseTab">PC Cases</label>
+            <p style = "font-size:19px"><b>Recommended Builds</b></p>
+            <label class="btn fill teal" for="LoWTierG">Low Tier: Gaming</label>
+            <label class="btn fill teal" for="MidTierG">Mid Tier: Gaming</label>
+            <label class="btn fill teal" for="HighTierG">High Tier: Gaming</label>
+            <label class="btn fill teal" for="LowTierE">Low End: Editing</label>
+            <label class="btn fill teal" for="HighTierE">High End: Editing</label>
           </div>
         </div>
         <div class="threequarters">
@@ -39,6 +46,7 @@
                       <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
+                      <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
                       <div> Price: {{ cpu.cpu_price }} </div>
                       <div> Speed: {{ cpu.cpu_speed }} </div>
                     </div>
@@ -63,6 +71,7 @@
                       <li><a href = "/PCPal/{{ gpu.id }}/">{{ gpu.gpu_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
+                      <li><a href = "/PCPal/{{ gpu.id }}/">{{ gpu.gpu_name }}</a><li>
                       <div> Price: {{ gpu.gpu_price }} </div>
                       <div> Speed: {{ gpu.gpu_mem }} </div>
                     </div>
@@ -87,6 +96,7 @@
                       <li><a href = "/PCPal/{{ ram.id }}/">{{ ram.ram_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
+                      <li><a href = "/PCPal/{{ ram.id }}/">{{ ram.ram_name }}</a><li>
                       <div> Price: {{ ram.ram_price }} </div>
                       <div> Capacity: {{ ram.ram_size }} </div>
                     </div>
@@ -111,6 +121,7 @@
                       <li><a href = "/PCPal/{{ mobo.id }}/">{{ mobo.mobo_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
+                      <li><a href = "/PCPal/{{ mobo.id }}/">{{ mobo.mobo_name }}</a><li>
                       <div> Price: {{ mobo.mobo_price }} </div>
                       <div> Max RAM: {{ mobo.mobo_ram }} </div>
                     </div>
@@ -135,6 +146,7 @@
                       <li><a href = "/PCPal/{{ hdd.id }}/">{{ hdd.hdd_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
+                      <li><a href = "/PCPal/{{ hdd.id }}/">{{ hdd.hdd_name }}</a><li>
                       <div> Price: {{ hdd.hdd_price }} </div>
                       <div> Capacity: {{ hdd.hdd_cap }} </div>
                     </div>
@@ -159,6 +171,7 @@
                       <li><a href = "/PCPal/{{ psu.id }}/">{{ psu.psu_name }}</a><li>
                     </div>
                     <div class="black padded rounded">
+                      <li><a href = "/PCPal/{{ psu.id }}/">{{ psu.psu_name }}</a><li>
                       <div> Price: {{ psu.psu_price }} </div>
                       <div> Peak Wattage: {{ psu.psu_watts }} </div>
                     </div>
@@ -183,8 +196,9 @@
                         <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
                       </div>
                       <div class="black padded rounded">
+                        <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
                         <div> Price: {{ twr.twr_price }} </div>
-                        <div> Tower Type: {{ twr.twr_type }} </div>
+                        <div> Type: {{ twr.twr_type }} </div>
                       </div>
                   </div>
                 </div>
@@ -195,6 +209,539 @@
                 {% endif %}
             </div>
           </div>
+
+
+          <div class="threequarters">
+            <div class="accordion">
+            <input type="radio" name="group1" id="LoWTierG">
+              <div>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="threequarters">
+            <div class="accordion">
+            <input type="radio" name="group1" id="MidTierG">
+              <div>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>GPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="threequarters">
+            <div class="accordion">
+            <input type="radio" name="group1" id="HighTierG">
+              <div>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>GPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="threequarters">
+            <div class="accordion">
+            <input type="radio" name="group1" id="LoWTierE">
+              <div>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>GPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="threequarters">
+            <div class="accordion">
+            <input type="radio" name="group1" id="HighTierE">
+              <div>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>GPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+                <p style = "font-size:16px"><b>CPU</b></p>
+                <ul>
+                  <div class="card" style="width:275px; height:96px;display: inline-block">
+                    <div>
+                      <div class="white padded rounded">
+                        <div>Low Gaming</div>
+                      </div>
+                      <div class="black padded rounded">
+                        <div> Price: </div>
+                        <div> Type: </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
         </div>
       </div>
     </div>

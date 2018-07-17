@@ -7,6 +7,7 @@ class CPU(models.Model):
     cpu_name = models.CharField(max_length = 200)
     cpu_price = models.CharField(max_length = 200)
     cpu_speed = models.CharField(max_length = 200, default = 'def val')
+    #image = models.ImageField(upload_to='cpu/%Y/%m/%d', blank=True)
     def update(self):
         list = pcpartpicker.lists.get_list('cpu', 1) 
         for cpu in list:

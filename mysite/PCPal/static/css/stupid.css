@@ -342,7 +342,7 @@ a:not(.btn):not(.noeffect):after {
   transform-style: preserve-3d;
 }
 .card:hover>div {
-  transform: rotateY( 180deg ) ;
+  transform: rotateX( -180deg ) ;
   transition: transform 0.5s;
 }
 .card>div>div {
@@ -352,7 +352,7 @@ a:not(.btn):not(.noeffect):after {
   backface-visibility: hidden;
 }
 .card>div>div:nth-child(2) {
-  transform: rotateY( 180deg );
+  transform: rotateX( -180deg );
 }
 
 /**** tags ****/
