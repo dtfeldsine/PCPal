@@ -14,21 +14,25 @@
     {# loads header/nav bar #}
     {% block header %} 
     <header>
-        <script src="js/jquery.js"></script> 
-        <script> 
-        $(function(){
-            $("#includedContent").load("rec_parts.html"); 
-        });
-        </script>
+        <style type="text/css">
+          body {
+            /*background-image: url("https://s8.postimg.cc/z4r1w6rnp/brick-unsplash-4000.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 200%;
+            background-attachment: scroll;*/
+          }
+        </style>
+
     </header> 
     {% endblock %}
 
     {# The Document Body #}
+    <body>
     <div class="site-wrapper">
         <div class="aspect-wrapper">
             {% block content %}
             {% endblock %}
         </div>
     </div>
-    <div id="includedContent"></div>
+    </body>
 </html>
