@@ -1,0 +1,49 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel = "stylesheet" type="text/css" href="{% static 'polls/signup_style.css' %}" />
+
+<header>
+  <nav class="navbar-custom navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+  <img style="width:284px; height:71px;" src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">      </div>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+{% block content %}
+
+<div id="site-wrapper">
+  <div class="aspect-wrapper">
+    <div class="register-wrapper">
+      <h1 id="register-header">Register</h1>
+      <form class="site-form" action="/user/signup/" method="post">
+        {% csrf_token %}
+        <!--{{form}}-->
+        <div class="register-fields">
+          <div class="form-group">
+            <p class="field-label">Username</p>
+            <p>{{ form.username  }}</p>
+            <p>{{form.username.errors}}</p>
+          </div>
+          <div class="form-group">
+            <p class="field-label">Password</p>
+            <p>{{ form.password1  }}</p>
+            <p>{{form.password1.errors}}</p>
+          </div>
+          <div class="form-group">
+            <p class="re-enter-label">Re-enter Password</p>
+            <p>{{ form.password2  }}</p>
+            <p>{{form.password2.errors}}</p>
+          </div>
+          <input type="submit" class="btn" id="register-btn" name="" value="Submit"></td>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -11,12 +11,13 @@ class CPU(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('cpu', 1) 
         for cpu in list:
-            cpu_entry = CPU(cpu_name=cpu["name"],
+            if cpu["price"] != '' and len(cpu["price"]) < 8:
+                cpu_entry = CPU(cpu_name=cpu["name"],
                             cpu_price=cpu["price"],
                             cpu_speed=cpu["speed"])
                 #cpu_ratings=cpu["ratings"],
                 #cpu_cores=cpu["cores"])
-            cpu_entry.save()
+                cpu_entry.save()
 
     def __str__(self):
        # self.update()

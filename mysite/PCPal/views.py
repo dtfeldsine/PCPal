@@ -12,7 +12,7 @@ from .models import TWR
 # Create your views here.
 
 def cpu_index(request):
-    latest_cpu_list = CPU.objects.order_by('-cpu_name')[:100]
+    latest_cpu_list = CPU.objects.order_by('cpu_price')[:100]
     latest_gpu_list = GPU.objects.order_by('-gpu_name')[:100]
     latest_ram_list = RAM.objects.order_by('-ram_name')[:100]
     latest_mobo_list = MOBO.objects.order_by('-mobo_name')[:100]
