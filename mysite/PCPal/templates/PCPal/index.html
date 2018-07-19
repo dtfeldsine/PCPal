@@ -4,9 +4,11 @@
 
 {% block content %}
 <div class="main_content">
+  <div class="padded">
+    <img style="width:284px; height:71px;" src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">
+  </div>
   <div id="vue-div" class="display:none">
     <div>
-      <img style="width:284px; height:71px; left: 10px; top: 10px;" src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">
       <div class="container">
         <div class="quarter">
           <div align="right">
@@ -19,7 +21,7 @@
             <label class="btn fill teal" for="PSUTab">Power Supplies</label>
             <label class="btn fill teal" for="CaseTab">PC Cases</label>
             
-            <p style = "font-size:19px; color:white;"><b>Recommended Builds</b></p>
+            <p style = "font-size:19px; text-align: center; color:white;"><b>Recommended Builds</b></p>
             <label class="btn fill teal" for="LoWTierG">Low Tier: Gaming</label>
             <label class="btn fill teal" for="MidTierG">Mid Tier: Gaming</label>
             <label class="btn fill teal" for="HighTierG">High Tier: Gaming</label>
@@ -194,8 +196,9 @@
                 {% for twr in latest_case_list %}
                 <div class="card" style="width:275px; height:96px;display: inline-block;">
                   <div>
-                      <div style="height: 94px; display: block; text-align: center; justify-content: center;"" class="white padded rounded">
-                        <li style="height: 94px; display: block; text-align: center; justify-content: center;"><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
+                      <div class="white padded rounded">
+
+                        <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
                       </div>
                       <div class="black padded rounded">
                         <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
@@ -224,7 +227,7 @@
                     <div>
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Processor:</b></p>
-                        <div style="text-align: center;"><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
+                        <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
                       </div>
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
