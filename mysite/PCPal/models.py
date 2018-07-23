@@ -30,10 +30,11 @@ class MOBO(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('motherboard', 1)
         for motherboard in list:
-            mobo_entry = MOBO(mobo_name=motherboard["name"],
+            if motherboard["price"] != '' and len(motherboard["price"]) < 8 and len(motherboard["name"]) < 27: 
+                mobo_entry = MOBO(mobo_name=motherboard["name"],
                               mobo_price=motherboard["price"],
                               mobo_ram=motherboard["max-ram"])
-            mobo_entry.save()
+                mobo_entry.save()
 
     def __str__(self):
         return self.mobo_name
@@ -45,10 +46,11 @@ class RAM(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('memory', 1)
         for memory in list:
-            ram_entry = RAM(ram_name=memory["name"],
+            if memory["price"] != '' and len(memory["price"]) < 8:
+                ram_entry = RAM(ram_name=memory["name"],
                             ram_price=memory["price"],
                             ram_size=memory["size"])
-            ram_entry.save()
+                ram_entry.save()
 
     def __str__(self):
         return self.ram_name
@@ -60,10 +62,11 @@ class GPU(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('video-card', 1)
         for videocard in list:
-            gpu_entry = GPU(gpu_name=videocard["name"],
+            if videocard["price"] != '' and len(videocard["price"]) < 8 and len(videocard["name"]) < 27:
+                gpu_entry = GPU(gpu_name=videocard["name"],
                             gpu_price=videocard["price"],
                             gpu_mem=videocard["memory"])
-            gpu_entry.save()
+                gpu_entry.save()
 
     def __str__(self):
         return self.gpu_name
@@ -75,10 +78,11 @@ class HDD(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('internal-hard-drive', 1)
         for hdd in list:
-            hdd_entry = HDD(hdd_name=hdd["name"],
+            if hdd["price"] != '' and len(hdd["price"]) < 8:
+                hdd_entry = HDD(hdd_name=hdd["name"],
                             hdd_price=hdd["price"],
                             hdd_cap=hdd["capacity"])
-            hdd_entry.save()
+                hdd_entry.save()
 
     def __str__(self):
         return self.hdd_name
@@ -91,10 +95,11 @@ class PSU(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('power-supply', 1)
         for powersupply in list:
-            psu_entry = PSU(psu_name=powersupply["name"],
+            if powersupply["price"] != '' and len(powersupply["price"]) < 8:
+                psu_entry = PSU(psu_name=powersupply["name"],
                             psu_price=powersupply["price"],
                             psu_watts=powersupply["watts"])
-            psu_entry.save()
+                psu_entry.save()
 
     def __str__(self):
         return self.psu_name
@@ -106,10 +111,11 @@ class TWR(models.Model):
     def update(self):
         list = pcpartpicker.lists.get_list('case', 1)
         for case in list:
-            case_entry = TWR(twr_name=case["name"],
+            if case["price"] != '' and len(case["price"]) < 8:
+                case_entry = TWR(twr_name=case["name"],
                             twr_price=case["price"],
                             twr_type=case["type"])
-            case_entry.save()
+                case_entry.save()
 
     def __str__(self):
         return self.twr_name
