@@ -1,0 +1,156 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html *{font-family: SansSerif, sans-serif;}
+
+/*Needed for persistent navbar*/
+body { padding-top: 50px; }
+
+
+/*Used for the background image*/
+#site-wrapper{
+    z-index: 0;
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #757575;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+/*Used to set aspect ratio of quiz div*/
+.aspect-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.login-wrapper{
+    width: 30em;
+    height: 30em;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 25px 25px 25px 25px;
+    z-index: 5;
+}
+
+.login-fields{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.field-label{
+    color: white;
+    margin-left: -60%;
+    margin-bottom: 1%;
+    margin-top:1%;
+
+
+}
+
+
+.signup-link-text{
+}
+
+.signup-link{
+    position: relative;
+    display: block;
+    margin: 10% auto;
+    width: 80%;
+    font-size: x-large;
+}
+
+#signup-btn{
+    outline: none;
+    position: relative;
+    display: block;
+    font-size: x-large;
+    margin: auto;
+    width: 100%;
+}
+
+/*
+#signup-btn:hover{
+    outline: none;
+    position: relative;
+    display: block;
+    margin: 10% auto;
+    width: 80%;
+    font-size: x-large;
+}
+*/
+
+.input-form{
+    border: none;
+}
+
+input[type=text],
+input[type=password]{
+
+    border-radius: 50px 50px 50px 50px;
+    border: 2px solid grey;
+    background: transparent;
+    width: 80%;
+    height: 8%
+}
+
+#username-form{
+    placeholder:"Username";
+}
+
+input{
+    color: white;
+    padding-left: 5%;
+}
+
+
+input:focus,
+input:hover{
+    outline: none;
+    border: 2px solid cornflowerblue;
+}
+
+
+#login-header{
+    color: white;
+    padding-left: 10%;
+}
+
+#login-btn,
+#login-btn:hover{
+    outline: none;
+    position: relative;
+    display: block;
+    margin: 10% auto;
+    width: 80%;
+    font-size: x-large;
+}
+
+
+/* NAVBAR RELATED ELEMENTS*/
+.btn{
+    background-color: rgba(1,1,1,1);
+    color: white;
+}
+.btn:focus,
+.btn:hover{
+    color: #0fac09;
+}
+.navbar-custom {
+  background-color: rgba(1,1,1,1);
+}
+.navbar-custom .navbar-nav>li>a {
+  color: #fff;
+}
+.navbar-custom .navbar-nav>li>a:focus,
+.navbar-custom .navbar-nav>li>a:hover {
+  color: #CCCCCC;
+}
+.navbar-custom .navbar-brand {
+    color: #fff;
+}
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:hover {
+    color: yellow;
+}
+/**/
+
+
