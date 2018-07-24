@@ -9,6 +9,9 @@ from .models import MOBO
 from .models import HDD
 from .models import PSU
 from .models import TWR
+
+# A view is a python function that takes a web request and returns 
+# a web response. 
 # Create your views here.
 
 def cpu_index(request):

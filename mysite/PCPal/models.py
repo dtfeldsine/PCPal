@@ -1,6 +1,7 @@
 from django.db import models
 from PCPartPicker_API import pcpartpicker
-
+# Each attribute of a model represents a diff database field.
+# Django uses this to provide auto-generated daabase access API.
 # Create your models here.
 
 class CPU(models.Model):

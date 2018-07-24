@@ -2,7 +2,7 @@ from django.contrib import admin
 from PCPartPicker_API import pcpartpicker
 
 # Register your models here.
-
+# Sets up admin interface
 from django.contrib import admin
 from .models import CPU
 from .models import MOBO
