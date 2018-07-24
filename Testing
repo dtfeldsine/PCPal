@@ -1,0 +1,31 @@
+Module: Test if data is in the admin page.    (Anthony/Dustin)
+           TEST: cpu data
+                 gpu data 
+                 ram data
+                 mobo data
+                 hdd data
+                 psu data
+                 twr data
+    
+Module: Test if login/signup work correctly.  (Anthony/Dustin)
+           TEST: password strength check
+                 make an account and save it
+                 login with created account
+            
+Module: Check for part list data population.  (Caleb/Kevin/Ryan)
+           TEST: cpu list data
+                 gpu list data 
+                 ram list data
+                 mobo list data
+                 hdd list data
+                 psu list data
+                 twr list data
+                 
+Module: Recommended build pages.              (Caleb/Kevin/Ryan)
+           TEST: Test if html tabs link to correct build.
+                 Test if Newegg and Amazon links correctly link.
+                 
+Module: CSS Cards.                            (Caleb/Kevin/Ryan)
+           TEST: Test if card flipping functionality works.
+                 Test if frontfacing data displays.
+                 Test if backfacing data displays.
