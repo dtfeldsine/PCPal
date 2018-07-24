@@ -12,7 +12,7 @@ body {font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue
 p, li {margin-bottom:0.5em}
 p {text-align:justify}
 label, strong {font-weight:bold}
-ul {list-style-type:none; padding-left:20px}
+ul {padding-left:20px}
 a {text-decoration:none; color:#61892F; white-space:nowrap}
 a:hover {cursor:pointer}
 h1,h2,h3,h4,h5,h6{font-weight:bold}

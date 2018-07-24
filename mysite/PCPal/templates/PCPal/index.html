@@ -4,15 +4,23 @@
 
 {% block content %}
 <div class="main_content">
-  <div class="padded">
-    <img style="width:284px; height:71px;" src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">
-  </div>
+
+  <!--Nav Bar Container for Logo-->
+  <nav style="background-color: #000000">
+    <div style="margin-right: 25px;">
+      <img style="width:284px; height:71px;" src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">
+    </div>
+  </nav>
   <div id="vue-div" class="display:none">
     <div>
       <div class="container">
         <div class="quarter">
           <div align="right">
+            <!--My Build BUTTON-->
             <label class="btn fill teal" for="myBuildTab">My Build</label>
+
+            <!--Current Parts BUTTONS-->
+            <p style = "font-size:19px; text-align: center; color:white;"><b>Current Parts</b></p>
             <label class="btn fill teal" for="CPUTab">Processors</label>
             <label class="btn fill teal" for="GPUTab">Graphics Cards</label>
             <label class="btn fill teal" for="MemTab">Memory</label>
@@ -20,7 +28,8 @@
             <label class="btn fill teal" for="HDDTab">Hard Drives</label>
             <label class="btn fill teal" for="PSUTab">Power Supplies</label>
             <label class="btn fill teal" for="CaseTab">PC Cases</label>
-            
+
+            <!--Recommended Builds BUTTONS-->
             <p style = "font-size:19px; text-align: center; color:white;"><b>Recommended Builds</b></p>
             <label class="btn fill teal" for="LoWTierG">Low Tier: Gaming</label>
             <label class="btn fill teal" for="MidTierG">Mid Tier: Gaming</label>
@@ -30,27 +39,193 @@
           </div>
         </div>
         <div class="threequarters">
+
+          <!--My Build TAB-->
           <div class="accordion">
-            <input type="radio" name="group1" id="myBuildTab">
+          <input type="radio" name="group1" id="myBuildTab">
             <div>
-              <div class="card" style="width:500px; height:200px">
-                My Build Tab, display build data here
-              </div>
+              <p style = "font-size:20px; color:white;"><u><b>Your Current Build:</b></u></p>
+              <ul style="right: 50px;">
+                <!--CPU Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block;">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="white padded rounded">
+                      <p style = "font-size:16px;"><b>Processor:</b></p>
+                      <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
+                    </div>
+                    <!--Backward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
+                      <div> Price: $59.16</div>
+                      <div> Speed: 3.5GHz</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIA2W07570225&cm_re=Intel_Pentium_G4560-_-19-117-743-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:35px;height:34px;"></a>
+                        <a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--GPU Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="white padded rounded">
+                      <p style = "font-size:16px;"><b>Graphics Card:</b></p>
+                      <div><a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">Zotac Geforce GTX 1050Ti</a></div>
+                    </div>
+                    <!--Forward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">Zotac Geforce GTX 1050Ti</a></div>
+                      <div> Price: $169.99</div>
+                      <div> Video RAM: 4GB</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16814500411&cm_re=Zotac_Geforce_GTX_1050Ti-_-14-500-411-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
+                        <a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--RAM Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="white padded rounded">
+                      <p style = "font-size:16px;"><b>Memory:</b></p>
+                      <div><a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">Crucial - Ballistix Sport LT</a></div>
+                    </div>
+                    <!--Forward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">Crucial - Ballistix Sport LT</a></div>
+                      <div> Price: $88.11</div>
+                      <div> Capacity: 8GB (2x4GB)</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIAD7H5JF7034&cm_re=crucial_ballistix_sport_lt-_-9SIAD7H5JF7034-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
+                        <a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--MOBO Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="
+                    <!--Forward-facing part of card-->added rounded">
+                      <p style = "font-size:16px;"><b>Motherboard:</b></p>
+                      <div><a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">Gigabyte - GA-B250M</a></div>
+                    </div>
+                    <!--Forward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">Gigabyte - GA-B250M</a></div>
+                      <div> Price: $44.99</div>
+                      <div> Max RAM: 64GB</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16813128980&cm_re=Gigabyte_-_GA-B250M-_-13-128-980-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
+                        <a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--HDD Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="white padded rounded">
+                      <p style = "font-size:16px;"><b>Hard Drive:</b></p>
+                      <div><a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">Hitachi - Ultrastar 7K3000</a></div>
+                    </div>
+                    <!--Forward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">Hitachi - Ultrastar 7K3000</a></div>
+                      <div> Price: $55.88</div>
+                      <div> Capacity: 2TB</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIA5AD1P08389&cm_re=Hitachi_-_Ultrastar_7K3000-_-1Z4-0005-00041-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
+                        <a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--PSU Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="white padded rounded">
+                      <p style = "font-size:16px;"><b>Power Supply:</b></p>
+                      <div><a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">Corsair CXM (2015)</a></div>
+                    </div>
+                    <!--Forward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">Corsair CXM (2015)</a></div>
+                      <div> Price: $44.99</div>
+                      <div> Peak Wattage: 450W</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16817139146&cm_re=corsair_cxm_450w-_-17-139-146-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
+                        <a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--PC Case Card-->
+                <div class="card" style="width:275px; height:96px;display: inline-block">
+                  <div>
+                    <!--Forward-facing part of card-->
+                    <div class="white padded rounded">
+                      <p style = "font-size:16px;"><b>PC Case:</b></p>
+                      <div><a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">Thermaltake - Versa H22</a></div>
+                    </div>
+                    <!--Forward-facing part of card-->
+                    <div class="black padded rounded">
+                      <div><a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">Thermaltake - Versa H22</a></div>
+                      <div> Price: $47.86</div>
+                      <div> Type: ATX Mid</div>
+                      <div style="position:relative; left:175px; bottom:10px;">
+                        <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIA8EF5RY3107&cm_re=Thermaltake_-_Versa_H22-_-11-133-249-_-Product">
+                        <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
+                        <a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">
+                        <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
             </div>
           </div>
+
+          <!--///////////////////////////////////////////////////////////-->
+          <!--Current Parts HEADING-->
+          <!--///////////////////////////////////////////////////////////-->
+          <!--Processors TAB-->
           <div class="accordion">
             <input type="radio" name="group1" id="CPUTab">
+            <!--latest_cpu_list traversal-->
             <div>
               {% if latest_cpu_list %}
               <ul>
                 {% for cpu in latest_cpu_list %}
+                <!--CPU Card-->
                 <div class="card" style="width:275px; height:96px; display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{cpu.cpu_name}}</p>
                     </div>
+                    <!--Forward-facing part of card-->
                     <div class="black padded rounded">
-                      <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{cpu.cpu_name}}</p>
                       <div> Price: {{ cpu.cpu_price }} </div>
                       <div> Speed: {{ cpu.cpu_speed }} </div>
                     </div>
@@ -63,19 +238,25 @@
                 {% endif %}
             </div>
           </div>
+
+          <!--Graphics Cards Tab-->
           <div class="accordion">
             <input type="radio" name="group1" id="GPUTab">
+            <!--latest_gpu_list traversal-->
             <div>
               {% if latest_gpu_list %}
               <ul>
                 {% for gpu in latest_gpu_list %}
+                <!--GPU Card-->
                 <div class="card" style="width:275px; height:96px; display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ gpu.id }}/">{{ gpu.gpu_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{gpu.gpu_name}}</p>
                     </div>
+                    <!--Forward-facing part of card-->
                     <div class="black padded rounded">
-                      <li><a href = "/PCPal/{{ gpu.id }}/">{{ gpu.gpu_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{gpu.gpu_name}}</p>
                       <div> Price: {{ gpu.gpu_price }} </div>
                       <div> Speed: {{ gpu.gpu_mem }} </div>
                     </div>
@@ -88,19 +269,25 @@
                 {% endif %}
             </div>
           </div>
+
+          <!--Memory Tab-->
           <div class="accordion">
             <input type="radio" name="group1" id="MemTab">
+            <!--latest_ram_list traversal-->
             <div>
               {% if latest_ram_list %}
               <ul>
                 {% for ram in latest_ram_list %}
+                <!--RAM Card-->
                 <div class="card" style="width:275px; height:96px; display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ ram.id }}/">{{ ram.ram_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{ram.ram_name}}</p>
                     </div>
+                    <!--Forward-facing part of card-->
                     <div class="black padded rounded">
-                      <li><a href = "/PCPal/{{ ram.id }}/">{{ ram.ram_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{ram.ram_name}}</p>
                       <div> Price: {{ ram.ram_price }} </div>
                       <div> Capacity: {{ ram.ram_size }} </div>
                     </div>
@@ -113,19 +300,25 @@
                 {% endif %}
             </div>
           </div>
+
+          <!--Motherboards Tab-->
           <div class="accordion">
             <input type="radio" name="group1" id="MoboTab">
+            <!--latest_mobo_list traversal-->
             <div>
               {% if latest_mobo_list %}
               <ul>
                 {% for mobo in latest_mobo_list %}
+                <!--MOBO Card-->
                 <div class="card" style="width:275px; height:96px; display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ mobo.id }}/">{{ mobo.mobo_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{mobo.mobo_name}}</p>
                     </div>
+                    <!--Forward-facing part of card-->
                     <div class="black padded rounded">
-                      <li><a href = "/PCPal/{{ mobo.id }}/">{{ mobo.mobo_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{mobo.mobo_name}}</p>
                       <div> Price: {{ mobo.mobo_price }} </div>
                       <div> Max RAM: {{ mobo.mobo_ram }} </div>
                     </div>
@@ -138,19 +331,25 @@
                 {% endif %}
             </div>
           </div>
+
+          <!--Hard Drives Tab-->
           <div class="accordion">
             <input type="radio" name="group1" id="HDDTab">
+            <!--latest_hdd_list traversal-->
             <div>
               {% if latest_hdd_list %}
               <ul>
                 {% for hdd in latest_hdd_list %}
+                <!--HDD Card-->
                 <div class="card" style="width:275px; height:96px; display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ hdd.id }}/">{{ hdd.hdd_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{hdd.hdd_name}}</p>
                     </div>
+                    <!--Forward-facing part of card-->
                     <div class="black padded rounded">
-                      <li><a href = "/PCPal/{{ hdd.id }}/">{{ hdd.hdd_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{hdd.hdd_name}}</p>
                       <div> Price: {{ hdd.hdd_price }} </div>
                       <div> Capacity: {{ hdd.hdd_cap }} </div>
                     </div>
@@ -163,19 +362,25 @@
                 {% endif %}
             </div>
           </div>
+
+          <!--Power Supplies Tab-->
           <div class="accordion">
             <input type="radio" name="group1" id="PSUTab">
+            <!--latest_psu_list traversal-->
             <div>
               {% if latest_psu_list %}
               <ul>
                 {% for psu in latest_psu_list %}
+                <!--PSU Card-->
                 <div class="card" style="width:275px; height:96px;display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                     <div class="white padded rounded">
-                      <li><a href = "/PCPal/{{ psu.id }}/">{{ psu.psu_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{psu.psu_name}}</p>
                     </div>
+                    <!--Forward-facing part of card-->
                     <div class="black padded rounded">
-                      <li><a href = "/PCPal/{{ psu.id }}/">{{ psu.psu_name }}</a><li>
+                      <p style = "font-size:16px; color: #61892F">{{psu.psu_name}}</p>
                       <div> Price: {{ psu.psu_price }} </div>
                       <div> Peak Wattage: {{ psu.psu_watts }} </div>
                     </div>
@@ -188,20 +393,25 @@
                 {% endif %}
             </div>
           </div>
+
+          <!--PC Cases Tab-->
           <div class="accordion">
             <input type="radio" name="group1" id="CaseTab">
+            <!--latest_case_list traversal-->
             <div>
               {% if latest_case_list %}
               <ul>
                 {% for twr in latest_case_list %}
+                <!--PC Case Card-->
                 <div class="card" style="width:275px; height:96px;display: inline-block;">
                   <div>
+                    <!--Forward-facing part of card-->
                       <div class="white padded rounded">
-
-                        <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
+                        <p style = "font-size:16px; color: #61892F">{{twr.twr_name}}</p>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
-                        <li><a href = "/PCPal/{{ twr.id }}/">{{ twr.twr_name }}</a><li>
+                        <p style = "font-size:16px; color: #61892F">{{twr.twr_name}}</p>
                         <div> Price: {{ twr.twr_price }} </div>
                         <div> Type: {{ twr.twr_type }} </div>
                       </div>
@@ -215,20 +425,32 @@
             </div>
           </div>
 
-
-      
+            <!--///////////////////////////////////////////////////////////-->
+            <!--Recommended Builds-->
+            <!--///////////////////////////////////////////////////////////-->
+            <!--Low Tier: Gaming TAB-->
             <div class="accordion">
             <input type="radio" name="group1" id="LoWTierG">
               <div>
-                <p style = "font-size:20px; color:white;"><u><b>Low End Gaming Build</b></u></p>
+                <!--Low Tier Gaming Build Description-->
+                <p style = "font-size:20px; color:white;"><u><b>Low Tier Gaming Build</b></u></p>
                 <p style = "font-size:16px; color:white;"><b>Price Range: $450-$500</b></p>
+                <ul style="color: white">
+                  <li>Competent gaming rigs can even be built on a budget!</li>
+                  <li>This build saves money and space with a smaller mobo, case and hdd.</li>
+                  <li>For a gaming PC that does the job but doesn't break the bank:</li>
+                </ul>
+                <br>
                 <ul>
+                  <!--CPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block;">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Processor:</b></p>
                         <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
                         <div> Price: $59.16</div>
@@ -242,12 +464,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--GPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Graphics Card:</b></p>
                         <div><a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">Zotac Geforce GTX 1050Ti</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">Zotac Geforce GTX 1050Ti</a></div>
                         <div> Price: $169.99</div>
@@ -261,13 +486,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--RAM Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
-                        
                         <p style = "font-size:16px;"><b>Memory:</b></p>
                         <div><a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">Crucial - Ballistix Sport LT</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">Crucial - Ballistix Sport LT</a></div>
                         <div> Price: $88.11</div>
@@ -281,12 +508,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--MOBO Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Motherboard:</b></p>
                         <div><a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">Gigabyte - GA-B250M</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">Gigabyte - GA-B250M</a></div>
                         <div> Price: $44.99</div>
@@ -300,12 +530,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--HDD Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Hard Drive:</b></p>
                         <div><a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">Hitachi - Ultrastar 7K3000</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">Hitachi - Ultrastar 7K3000</a></div>
                         <div> Price: $55.88</div>
@@ -319,12 +552,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PSU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Power Supply:</b></p>
                         <div><a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">Corsair CXM (2015)</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">Corsair CXM (2015)</a></div>
                         <div> Price: $44.99</div>
@@ -338,12 +574,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PC Case Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>PC Case:</b></p>
                         <div><a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">Thermaltake - Versa H22</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">Thermaltake - Versa H22</a></div>
                         <div> Price: $47.86</div>
@@ -357,22 +596,41 @@
                       </div>
                     </div>
                   </div>
+                  <!--For who the build is:-->
+                  <div style="margin-top: 25px;">
+                    <p style = "font-size:16px; color:white;"><b>This Build Is Right For You If: </b></p>
+                    <ul style="color: white">
+                      <li>You want to experiment with building a PC but don’t want to spent too much.</li>
+                      <li>You’re not too picky about sacrificing visuals for performance.</li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </div>
-          
+
+            <!--Mid Tier: Gaming TAB-->
             <div class="accordion">
             <input type="radio" name="group1" id="MidTierG">
               <div>
+                <!--Mid Tier Gaming Build Description-->
                 <p style = "font-size:20px; color:white;"><u><b>Mid Tier Gaming Build</b></u></p>
                 <p style = "font-size:16px; color:white;"><b>Price Range: $750-$850</b></p>
+                <ul style="color: white">
+                  <li>Fairly capable gaming rigs that can run it all for less than $900!</li>
+                  <li>This build gives you more functionality and modern features.</li>
+                  <li>For a gaming PC that can run even some of the more demanding games on mid-low settings:</li>
+                </ul>
+                <br>
                 <ul>
+                  <!--CPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Processor:</b></p>
                         <div><a href="https://www.amazon.com/AMD-Desktop-Processor-Stealth-YD130XBBAEBOX/dp/B0741DLVL7">AMD Ryzen 3 1300X</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/AMD-Desktop-Processor-Stealth-YD130XBBAEBOX/dp/B0741DLVL7">AMD Ryzen 3 1300X</a></div>
                         <div> Price: $124.88</div>
@@ -386,12 +644,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--GPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Graphics Card:</b></p>
                         <div><a href="https://www.amazon.com/MSI-GAMING-GTX-1060-6G/dp/B01IEKYD5U/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531940029&sr=1-3&keywords=MSI+GeForce+GTX+1060">MSI GeForce GTX 1060</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/MSI-GAMING-GTX-1060-6G/dp/B01IEKYD5U/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531940029&sr=1-3&keywords=MSI+GeForce+GTX+1060">MSI GeForce GTX 1060</a></div>
                         <div> Price: $349.99</div>
@@ -405,12 +666,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--RAM Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Memory:</b></p>
                         <div><a href="https://www.amazon.com/G-SKILL-Ripjaws-288-Pin-Platform-F4-2400C15D-8GVR/dp/B013GHSKR8">G.Skill - Ripjaws V Series</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/G-SKILL-Ripjaws-288-Pin-Platform-F4-2400C15D-8GVR/dp/B013GHSKR8">G.Skill - Ripjaws V Series</a></div>
                         <div> Price: $91.99</div>
@@ -424,12 +688,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--MOBO Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Motherboard:</b></p>
                         <div><a href="https://www.amazon.com/GIGABYTE-GA-AB350M-Gaming-Ryzen-SMART-Motherboard/dp/B06XF49QNM">Gigabyte - GA-AB350M</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/GIGABYTE-GA-AB350M-Gaming-Ryzen-SMART-Motherboard/dp/B06XF49QNM">Gigabyte - GA-AB350M</a></div>
                         <div> Price: $74.99</div>
@@ -443,12 +710,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--HDD Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Hard Drive:</b></p>
                         <div><a href="https://www.amazon.com/Inland-Professional-240GB-Internal-Solid/dp/B076XXMJZH">Inland Pro SSD</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Inland-Professional-240GB-Internal-Solid/dp/B076XXMJZH">Inland Pro SSD</a></div>
                         <div> Price: $42.99</div>
@@ -462,12 +732,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PSU Card-->
                    <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Power Supply:</b></p>
                         <div><a href="https://www.amazon.com/dp/B01N5WW9GQ/ref=twister_B01N4WK47K?_encoding=UTF8&psc=1">Corsair TXM Gold</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/dp/B01N5WW9GQ/ref=twister_B01N4WK47K?_encoding=UTF8&psc=1">Corsair TXM Gold</a></div>
                         <div> Price: $89.99</div>
@@ -481,12 +754,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PC Case Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>PC Case:</b></p>
                         <div><a href="https://www.amazon.com/dp/B01N5WW9GQ/ref=twister_B01N4WK47K?_encoding=UTF8&psc=1">Cooler Master - MasterBox Q300L</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/dp/B01N5WW9GQ/ref=twister_B01N4WK47K?_encoding=UTF8&psc=1">Cooler Master - MasterBox Q300L</a></div>
                         <div> Price: $39.99</div>
@@ -500,22 +776,41 @@
                       </div>
                     </div>
                   </div>
+                   <!--For who the build is:-->
+                  <div style="margin-top: 25px;">
+                    <p style = "font-size:16px; color:white;"><b>This Build Is Right For You If: </b></p>
+                    <ul style="color: white">
+                      <li>You want to get into PC building and are looking for a good starting point.</li>
+                      <li>You’re are not too picky about running demanding games at lower settings.</li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </div>
-          
+
+            <!--High Tier: Gaming TAB-->
             <div class="accordion">
             <input type="radio" name="group1" id="HighTierG">
               <div>
-                <p style = "font-size:20px; color:white;"><u><b>High End Gaming Build</b></u></p>
+                <!--High Tier Gaming Build Description-->
+                <p style = "font-size:20px; color:white;"><u><b>High Tier Gaming Build</b></u></p>
                 <p style = "font-size:16px; color:white;"><b>Price Range: $2,000-$2,200</b></p>
+                <ul style="color: white">
+                  <li>This is about as good as it gets for gaming!</li>
+                  <li>This build will get you the highest of the high in terms of visuals and performance.</li>
+                  <li>For a gaming PC that will play most games on high settings, with high res and high FPS:</li>
+                </ul>
+                <br>
                 <ul>
+                  <!--CPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Processor:</b></p>
                         <div><a href="https://www.amazon.com/Intel-i7-8700K-Desktop-Processor-Unlocked/dp/B07598VZR8/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531948729&sr=1-3&keywords=Intel+Core+i7-8700K">Intel Core i7-8700K</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Intel-i7-8700K-Desktop-Processor-Unlocked/dp/B07598VZR8/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531948729&sr=1-3&keywords=Intel+Core+i7-8700K">Intel Core i7-8700K</a></div>
                         <div> Price: $339.99</div>
@@ -529,12 +824,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--GPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Graphics Card:</b></p>
                         <div><a href="https://www.amazon.com/MSI-GAMING-GTX-1080-TI/dp/B06XVG7M23/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531948821&sr=1-3&keywords=MSI+GeForce+GTX+1080+Ti">MSI GeForce GTX 1080 Ti</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/MSI-GAMING-GTX-1080-TI/dp/B06XVG7M23/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531948821&sr=1-3&keywords=MSI+GeForce+GTX+1080+Ti">MSI GeForce GTX 1080 Ti</a></div>
                         <div> Price: $789.99</div>
@@ -548,12 +846,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--RAM Card-->
                    <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Memory:</b></p>
                         <div><a href="https://www.amazon.com/Kingston-HyperX-FURY-2x8GB-1866MHz/dp/B00J8E8Y5C/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531948885&sr=1-3&keywords=Kingston+HyperX+Fury+Black">Kingston HyperX Fury Black</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Kingston-HyperX-FURY-2x8GB-1866MHz/dp/B00J8E8Y5C/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531948885&sr=1-3&keywords=Kingston+HyperX+Fury+Black">Kingston HyperX Fury Black</a></div>
                         <div> Price: $151.89</div>
@@ -567,12 +868,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--MOBO Card-->
                    <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Motherboard:</b></p>
                         <div><a href="https://www.amazon.com/MSI-GAMING-DDR3-2133-Motherboard/dp/B00LUY72F6/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949024&sr=1-1&keywords=MSI+970+Gaming">MSI 970 Gaming</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/MSI-GAMING-DDR3-2133-Motherboard/dp/B00LUY72F6/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949024&sr=1-1&keywords=MSI+970+Gaming">MSI 970 Gaming</a></div>
                         <div> Price: $179.99</div>
@@ -586,12 +890,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--HDD Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Hard Drive:</b></p>
                         <div><a href="https://www.amazon.com/Black-512GB-Performance-SSD-WDS512G1X0C/dp/B01MR4VOBZ/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949157&sr=1-1&keywords=Western+Digital+WDS512G1X0C">Western Digital WDS512G1X0C</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Black-512GB-Performance-SSD-WDS512G1X0C/dp/B01MR4VOBZ/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949157&sr=1-1&keywords=Western+Digital+WDS512G1X0C">Western Digital WDS512G1X0C</a></div>
                         <div> Price: $158.94</div>
@@ -605,12 +912,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PSU Card-->
                    <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Power Supply:</b></p>
                         <div><a href="https://www.amazon.com/EVGA-SuperNOVA-Modular-Warranty-220-G2-0850-XR/dp/B00IKDETOC/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949334&sr=1-1&keywords=EVGA+SuperNOVA+850">EVGA SuperNOVA 850</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/EVGA-SuperNOVA-Modular-Warranty-220-G2-0850-XR/dp/B00IKDETOC/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949334&sr=1-1&keywords=EVGA+SuperNOVA+850">EVGA SuperNOVA 850</a></div>
                         <div> Price: $99.99</div>
@@ -624,12 +934,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PC Case Card-->
                    <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>PC Case:</b></p>
                         <div><a href="https://www.amazon.com/Mid-Tower-Computer-digital-lighting-CA-H700W-WB/dp/B075B91T7Q/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949389&sr=1-1&keywords=NZXT+H700i">NZXT H700i</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Mid-Tower-Computer-digital-lighting-CA-H700W-WB/dp/B075B91T7Q/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949389&sr=1-1&keywords=NZXT+H700i">NZXT H700i</a></div>
                         <div> Price: $179.51</div>
@@ -643,26 +956,41 @@
                       </div>
                     </div>
                   </div>
+                   <!--For who the build is:-->
+                  <div style="margin-top: 25px;">
+                    <p style = "font-size:16px; color:white;"><b>This Build Is Right For You If: </b></p>
+                    <ul style="color: white">
+                      <li>You want to get serious about PC building and have money to burn.</li>
+                      <li>You are willing to spend quite a bit for the best of the best.</li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </div>
-          
 
-
-
-          
+            <!--Low End: Editing TAB-->
             <div class="accordion">
             <input type="radio" name="group1" id="LowTierE">
               <div>
+                <!--Low End Editing Build Description-->
                 <p style = "font-size:20px; color:white;"><u><b>Low End Editing Build</b></u></p>
                 <p style = "font-size:16px; color:white;"><b>Price Range: $700-$750</b></p>
+                <ul style="color: white">
+                  <li>Editing rigs can be built on a budget!</li>
+                  <li>This build saves money with less emphasis on GPU power and more RAM and CPU power.</li>
+                  <li>For a cheap and compact editing build that does the job:</li>
+                </ul>
+                <br>
                 <ul>
+                  <!--CPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Processor:</b></p>
                         <div><a href="https://www.amazon.com/Intel-8th-Core-i5-8400-Processor/dp/B0759FGJ3Q/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531949466&sr=1-3&keywords=Intel+Core+i5-8400">Intel Core i5-8400</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Intel-8th-Core-i5-8400-Processor/dp/B0759FGJ3Q/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531949466&sr=1-3&keywords=Intel+Core+i5-8400">Intel Core i5-8400</a></div>
                         <div> Price: $178.99</div>
@@ -676,12 +1004,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--GPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Graphics Card:</b></p>
                         <div><a href="https://www.amazon.com/ZOTAC-DisplayPort-Dual-Link-Graphics-ZT-P10500A-10L/dp/B01M4MIU94/ref=sr_1_4?s=electronics&ie=UTF8&qid=1531949518&sr=1-4&keywords=MSI+Gaming+GeForce+GTX+1050">ZOTAC GeForce GTX 1050</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/ZOTAC-DisplayPort-Dual-Link-Graphics-ZT-P10500A-10L/dp/B01M4MIU94/ref=sr_1_4?s=electronics&ie=UTF8&qid=1531949518&sr=1-4&keywords=MSI+Gaming+GeForce+GTX+1050">ZOTAC GeForce GTX 1050</a></div>
                         <div> Price: $139.99</div>
@@ -695,12 +1026,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--RAM Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Memory:</b></p>
                         <div><a href="https://www.amazon.com/Ballistix-Sport-Single-PC4-19200-288-Pin/dp/B00UFBZOVE/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949694&sr=1-1&keywords=ballistix+sport+lt+8gb">Ballistix Sport LT</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Ballistix-Sport-Single-PC4-19200-288-Pin/dp/B00UFBZOVE/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949694&sr=1-1&keywords=ballistix+sport+lt+8gb">Ballistix Sport LT</a></div>
                         <div> Price: $87.49</div>
@@ -714,12 +1048,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--MOBO Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Motherboard:</b></p>
                         <div><a href="https://www.amazon.com/MSI-Motherboard-Motherboards-Z370-PRO/dp/B075GN9YC4/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949788&sr=1-1&keywords=MSI+Z370-A+Pro">MSI Z370-A Pro</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/MSI-Motherboard-Motherboards-Z370-PRO/dp/B075GN9YC4/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949788&sr=1-1&keywords=MSI+Z370-A+Pro">MSI Z370-A Pro</a></div>
                         <div> Price: $99.99</div>
@@ -733,12 +1070,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--HDD Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Hard Drive:</b></p>
                         <div><a href="https://www.amazon.com/Seagate-BarraCuda-Cache-Desktop-ST2000DM006/dp/B01IEKG402/ref=sr_1_fkmr0_1?s=electronics&ie=UTF8&qid=1531949842&sr=1-1-fkmr0&keywords=Seagate+BarraCuda+ST2000D">Seagate BarraCuda ST2000D</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Seagate-BarraCuda-Cache-Desktop-ST2000DM006/dp/B01IEKG402/ref=sr_1_fkmr0_1?s=electronics&ie=UTF8&qid=1531949842&sr=1-1-fkmr0&keywords=Seagate+BarraCuda+ST2000D">Seagate BarraCuda ST2000D</a></div>
                         <div> Price: $58.99</div>
@@ -752,12 +1092,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PSU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Power Supply:</b></p>
                         <div><a href="https://www.amazon.com/EVGA-Bronze-Warranty-Supply-100-BT-0450-K1/dp/B01N9X3F8F/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949917&sr=1-1&keywords=EVGA+450+BT">EVGA 450 BT</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/EVGA-Bronze-Warranty-Supply-100-BT-0450-K1/dp/B01N9X3F8F/ref=sr_1_1?s=electronics&ie=UTF8&qid=1531949917&sr=1-1&keywords=EVGA+450+BT">EVGA 450 BT</a></div>
                         <div> Price: $29.99</div>
@@ -771,12 +1114,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PC Case Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>PC Case:</b></p>
                         <div><a href="https://www.amazon.com/CORSAIR-CARBIDE-100R-Mid-Tower-Case/dp/B00RORBQNW/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531949986&sr=1-2&keywords=Corsair+Carbide+100R">Corsair Carbide 100R</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/CORSAIR-CARBIDE-100R-Mid-Tower-Case/dp/B00RORBQNW/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531949986&sr=1-2&keywords=Corsair+Carbide+100R">Corsair Carbide 100R</a></div>
                         <div> Price: $56.99</div>
@@ -790,22 +1136,41 @@
                       </div>
                     </div>
                   </div>
+                   <!--For who the build is:-->
+                  <div style="margin-top: 25px;">
+                    <p style = "font-size:16px; color:white;"><b>This Build Is Right For You If: </b></p>
+                    <ul style="color: white">
+                      <li>You want to experiment with editing but don’t want to spent too much.</li>
+                      <li>You’re not too picky about have an incredibly fast or smooth editing experience.</li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </div>
 
+            <!--High End: Editing TAB-->
             <div class="accordion">
             <input type="radio" name="group1" id="HighTierE">
               <div>
+                <!--High End Editing Build Description-->
                 <p style = "font-size:20px; color:white;"><u><b>High End Editing Build</b></u></p>
                 <p style = "font-size:16px; color:white;"><b>Price Range: $2,600-$2,700</b></p>
+                <ul style="color: white">
+                  <li>A key difference between this build and the high tier gaming build is the focus on ram and hdd capacity.</li>
+                  <li>This build also includes a cutting edge processor and graphics card, as well as a large, high end case for further upgrades.</li>
+                  <li>For an editing PC that help ensure faster renders at higher fidelity:</li>
+                </ul>
+                <br>
                 <ul>
+                  <!--CPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Processor:</b></p>
                         <div><a href="https://www.amazon.com/Intel-BX80673I77820X-Core-i7-7820X-Processor/dp/B072NF4BY3/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531950038&sr=1-2&keywords=Intel+Core+i7-7820X">Intel Core i7-7820X</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Intel-BX80673I77820X-Core-i7-7820X-Processor/dp/B072NF4BY3/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531950038&sr=1-2&keywords=Intel+Core+i7-7820X">Intel Core i7-7820X</a></div>
                         <div> Price: $459.00</div>
@@ -819,12 +1184,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--GPU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Graphics Card:</b></p>
                         <div><a href="https://www.amazon.com/Gigabyte-GV-N1070G1-GAMING-8GD-REV2-0-Computer/dp/B075FTH3G7/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531950087&sr=1-3&keywords=Gigabyte+GeForce+GTX+1070">Gigabyte GeForce GTX 1070</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Gigabyte-GV-N1070G1-GAMING-8GD-REV2-0-Computer/dp/B075FTH3G7/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531950087&sr=1-3&keywords=Gigabyte+GeForce+GTX+1070">Gigabyte GeForce GTX 1070</a></div>
                         <div> Price: $459.99</div>
@@ -838,12 +1206,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--RAM Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Memory:</b></p>
                         <div><a href="https://www.amazon.com/CORSAIR-VENGEANCE-3200MHz-Desktop-Memory/dp/B071YZVXW5/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531950218&sr=1-2&keywords=Corsair+Vengeance&refinements=p_n_feature_five_browse-bin%3A9559990011">Corsair Vengeance RGB</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/CORSAIR-VENGEANCE-3200MHz-Desktop-Memory/dp/B071YZVXW5/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531950218&sr=1-2&keywords=Corsair+Vengeance&refinements=p_n_feature_five_browse-bin%3A9559990011">Corsair Vengeance RGB</a></div>
                         <div> Price: $382.99</div>
@@ -857,12 +1228,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--MOBO Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Motherboard:</b></p>
                         <div><a href="https://www.amazon.com/MSI-X299-SLI-Motherboard-PLUS/dp/B072MHRV47/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531950392&sr=1-3&keywords=msi+pro+series+x299">MSI Pro Series X299</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/MSI-X299-SLI-Motherboard-PLUS/dp/B072MHRV47/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531950392&sr=1-3&keywords=msi+pro+series+x299">MSI Pro Series X299</a></div>
                         <div> Price: $231.89</div>
@@ -876,12 +1250,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--HDD Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Hard Drive:</b></p>
                         <div><a href="https://www.amazon.com/Toshiba-Performance-Desktop-Internal-HDWE150XZSTA/dp/B013JPLKQK/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531950551&sr=1-3&keywords=Toshiba+X300">Toshiba X300</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Toshiba-Performance-Desktop-Internal-HDWE150XZSTA/dp/B013JPLKQK/ref=sr_1_3?s=electronics&ie=UTF8&qid=1531950551&sr=1-3&keywords=Toshiba+X300">Toshiba X300</a></div>
                         <div> Price: $137.32</div>
@@ -895,12 +1272,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PSU Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>Power Supply:</b></p>
                         <div><a href="https://www.amazon.com/GIGABYTE-GA-AB350M-Gaming-Ryzen-SMART-Motherboard/dp/B06XF49QNM">EVGA SuperNOVA 850 G2</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/GIGABYTE-GA-AB350M-Gaming-Ryzen-SMART-Motherboard/dp/B06XF49QNM">EVGA SuperNOVA 850 G2</a></div>
                         <div> Price: $109.99</div>
@@ -914,12 +1294,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--PC Case Card-->
                   <div class="card" style="width:275px; height:96px;display: inline-block">
                     <div>
+                      <!--Forward-facing part of card-->
                       <div class="white padded rounded">
                         <p style = "font-size:16px;"><b>PC Case:</b></p>
                         <div><a href="https://www.amazon.com/Phanteks-Aluminum-Ultimate-Computer-PH-ES813P_SRD/dp/B00S3964FA/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531950624&sr=1-2&keywords=Phanteks+Enthoo+Primo">Phanteks Enthoo Primo</a></div>
                       </div>
+                      <!--Forward-facing part of card-->
                       <div class="black padded rounded">
                         <div><a href="https://www.amazon.com/Phanteks-Aluminum-Ultimate-Computer-PH-ES813P_SRD/dp/B00S3964FA/ref=sr_1_2?s=electronics&ie=UTF8&qid=1531950624&sr=1-2&keywords=Phanteks+Enthoo+Primo">Phanteks Enthoo Primo</a></div>
                         <div> Price: $239.99</div>
@@ -933,6 +1316,14 @@
                       </div>
                     </div>
                   </div>
+                   <!--For who the build is:-->
+                  <div style="margin-top: 25px;">
+                    <p style = "font-size:16px; color:white;"><b>This Build Is Right For You If: </b></p>
+                    <ul style="color: white">
+                      <li>You want to get serious with editing at a prosumer level.</li>
+                      <li>You are willing to spend quite a bit to get a faster smoother editing experience.</li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -942,180 +1333,5 @@
     </div>
 
 
-          <!--<div class="threequarters">
-            <div class="accordion">
-            <input type="radio" name="group1" id="LoWTierG">
-              <div>
-                <p style = "font-size:20px;"><u><b>Low End Gaming Build</b></u></p>
-                <p style = "font-size:16px;"><b>Price Range: $450-$500</b></p>
-                <p style = "font-size:16px;"><b>Processor</b></p>
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block;">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">Intel Pentium G4560</a></div>
-                        <div> Price: $59.16</div>
-                        <div> Speed: 3.5GHz</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIA2W07570225&cm_re=Intel_Pentium_G4560-_-19-117-743-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:35px;height:34px;"></a>
-                          <a href="https://www.amazon.com/Intel-Pentium-Dual-Core-Processor-BX80677G4560/dp/B01NCE8T92">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul> 
-                <p style = "font-size:16px;"><b>Graphics Card</b></p>                 
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">Zotac Geforce GTX 1050Ti</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">Zotac Geforce GTX 1050Ti</a></div>
-                        <div> Price: $169.99</div>
-                        <div> Video RAM: 4GB</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16814500411&cm_re=Zotac_Geforce_GTX_1050Ti-_-14-500-411-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
-                          <a href="https://www.amazon.com/ZOTAC-GeForce-DisplayPort-128-bit-ZT-P10510A-10L/dp/B01MCU1ERO">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul>
-                <p style = "font-size:16px;"><b>Memory</b></p>
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">Crucial - Ballistix Sport LT</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">Crucial - Ballistix Sport LT</a></div>
-                        <div> Price: $88.11</div>
-                        <div> Capacity: 8GB (2x4GB)</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIAD7H5JF7034&cm_re=crucial_ballistix_sport_lt-_-9SIAD7H5JF7034-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
-                          <a href="https://www.amazon.com/Ballistix-Sport-4GBx2-PC4-19200-288-Pin/dp/B00UFF7Y72">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul>
-                <p style = "font-size:16px;"><b>Motherboard</b></p>
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">Gigabyte - GA-B250M</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">Gigabyte - GA-B250M</a></div>
-                        <div> Price: $44.99</div>
-                        <div> Max RAM: 64GB</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16813128980&cm_re=Gigabyte_-_GA-B250M-_-13-128-980-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
-                          <a href="https://www.amazon.com/GIGABYTE-GA-B250M-DS3H-LGA1151-Intel-Motherboard/dp/B01N2WG23X">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul>
-                <p style = "font-size:16px;"><b>Hard Drive</b></p>
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">Hitachi - Ultrastar 7K3000</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">Hitachi - Ultrastar 7K3000</a></div>
-                        <div> Price: $55.88</div>
-                        <div> Capacity: 2TB</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIA5AD1P08389&cm_re=Hitachi_-_Ultrastar_7K3000-_-1Z4-0005-00041-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
-                          <a href="https://www.amazon.com/Hitachi-HUA723020ALA641-Ultrastar-7200RPM-Enterprise/dp/B00HRLI2FU">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul>
-                <p style = "font-size:16px;"><b>Power Supply</b></p>
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">Corsair CXM (2015)</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">Corsair CXM (2015)</a></div>
-                        <div> Price: $44.99</div>
-                        <div> Peak Wattage: 450W</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=N82E16817139146&cm_re=corsair_cxm_450w-_-17-139-146-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
-                          <a href="https://www.amazon.com/Corsair-Bronze-Certified-Modular-CP-9020101-NA/dp/B01B72VXE6">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul>
-                <p style = "font-size:16px;"><b>PC Case</b></p>
-                <ul style="display: inline-flex;">
-                  <div class="card" style="width:275px; height:96px;display: inline-block">
-                    <div>
-                      <div class="white padded rounded">
-                        <div><a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">Thermaltake - Versa H22</a></div>
-                      </div>
-                      <div class="black padded rounded">
-                        <div><a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">Thermaltake - Versa H22</a></div>
-                        <div> Price: $47.86</div>
-                        <div> Type: ATX Mid</div>
-                        <div style="position:relative; left:175px; bottom:10px;">
-                          <a href="https://www.newegg.com/Product/Product.aspx?Item=9SIA8EF5RY3107&cm_re=Thermaltake_-_Versa_H22-_-11-133-249-_-Product">
-                          <img src="https://s8.postimg.cc/bsopil01h/newegg-256.png" style="width:32px;height:32px;"></a>
-                          <a href="https://www.amazon.com/Thermaltake-Versa-Computer-Chassis-CA-1B3-00M1NN-00/dp/B00J0NZ5N0">
-                          <img src="https://s8.postimg.cc/u0be1mlr9/amazon-white-256.png" style="width:32px;height:32px;"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p style = "position: relative; left: 10px; font-size:16px;">[DESCRIPTION]</p>
-                </ul>
-              </div>
-            </div>
-          </div>-->
-<!--
-{% if latest_cpu_list %}
-    <ul>
-    {% for cpu in latest_cpu_list %}
-        <li><a href = "/PCPal/{{ cpu.id }}/">{{ cpu.cpu_name }}</a><li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No CPUs are available.</p>
-{% endif %}
-  </div>
-</div>
--2>
+       
 {% endblock %}

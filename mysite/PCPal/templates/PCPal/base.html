@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 
 <html>
-    {# loads static files #}
-    {% block static %}
-    {% load static %}
-    <!-- Load Static Files Here -->
+  {# loads static files #}
+  {% block static %}
+  {% load static %}
+    <!-- Loaded Static Files Here -->
     <link rel = "stylesheet" type="text/css" href="{% static 'css/stupid.css' %}" />
     <link rel = "stylesheet" type="text/js" href="{% static 'js/vue.js' %}" />
     <link rel = "stylesheet" type="text/js" href="{% static 'js/jquery.js%' }">
     {% endblock %}
 
-
     {# loads header/nav bar #}
     {% block header %} 
     <header>
-        <style type="text/css">
-          body {
-            background: #222629;
-            background-image: url("https://s8.postimg.cc/vkdjwdys5/spaceform-low-poly-wireframe-heart.png");
-            background-repeat: no-repeat, no-repeat;
-            background-position: center, bottom; 
-            background-size: 25%, 100%;
-            background-attachment: fixed, fixed; 
-          }
-        </style>
-        <!--<nav>
-            <a href="logo">PCPal</a>
-            <a href="#">Item1</a>
-            <a href="#">Item2</a>
-        </nav>-->
-
+      <!--This is the background styling-->
+      <style type="text/css">
+        body {
+          background: #222629;
+          background-image: url("https://s8.postimg.cc/vkdjwdys5/spaceform-low-poly-wireframe-heart.png");
+          background-repeat: no-repeat;
+          background-position: center; 
+          background-size: 25%;
+          background-attachment: fixed; 
+        }
+      </style>
     </header> 
     {% endblock %}
 
     {# The Document Body #}
     <body>
     <div class="site-wrapper">
-        <div class="aspect-wrapper">
-            {% block content %}
-            {% endblock %}
-        </div>
+      <div class="aspect-wrapper">
+        {% block content %}
+        {% endblock %}
+      </div>
     </div>
     </body>
 </html>

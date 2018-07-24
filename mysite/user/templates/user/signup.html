@@ -1,26 +1,29 @@
 {% load static %}
+<!-- Loaded Static Files Here -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel = "stylesheet" type="text/css" href="{% static 'css/signup_style.css' %}" />
 
 <header>
+  <!--Nav Bar Container for Logo-->
   <nav class="navbar-custom navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-  <img style="width:284px; height:71px;" src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">      </div>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    </div><!-- /.container-fluid -->
+    <div style="margin-right: 25px;">
+        <div class="navbar-header">
+          <img style="width:284px; height:71px;"src="https://s8.postimg.cc/taku7q84l/PC_Pal_Logo_Transparent_cropped.png">
+        </div>
+      <ul class="nav navbar-nav navbar-right"></ul>
+    </div>
   </nav>
 </header>
 
 {% block content %}
-
+<!--defines our sign in functionality-->
 <div id="site-wrapper">
   <div class="aspect-wrapper">
     <div class="register-wrapper">
       <h1 id="register-header">Register</h1>
       <form class="site-form" action="/user/signup/" method="post">
         {% csrf_token %}
+
         <!--{{form}}-->
         <div class="register-fields">
           <div class="form-group">
