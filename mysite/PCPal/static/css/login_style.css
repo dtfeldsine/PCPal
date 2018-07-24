@@ -12,8 +12,12 @@ body { padding-top: 50px; }
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #757575;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+    background-color: #222629;
+    background-image: url("https://s8.postimg.cc/vkdjwdys5/spaceform-low-poly-wireframe-heart.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 25%;
+    background-attachment: fixed; 
 }
 
 /*Used to set aspect ratio of quiz div*/
