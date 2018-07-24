@@ -19,7 +19,7 @@ def cpu_index(request):
     latest_gpu_list = GPU.objects.order_by('gpu_price')[:100]
     latest_ram_list = RAM.objects.order_by('ram_price')[:100]
     latest_mobo_list = MOBO.objects.order_by('mobo_price')[:100]
-    latest_hdd_list = HDD.objects.order_by('-hdd_price')[:100]
+    latest_hdd_list = HDD.objects.order_by('hdd_price')[:100]
     latest_psu_list = PSU.objects.order_by('psu_price')[:100]
     latest_case_list = TWR.objects.order_by('twr_price')[:100]
     context = {
